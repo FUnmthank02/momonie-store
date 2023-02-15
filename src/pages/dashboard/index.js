@@ -3,7 +3,7 @@ import { deleteAProduct, getAllProducts, updateProduct } from "@/service/product
 import { useEffect, useState } from "react"
 import { Button, Modal } from 'antd'
 import { FileImageOutlined, UploadOutlined } from '@ant-design/icons'
-import Notify from "@/components/Notify"
+import Notify from "@/components/notify"
 import Link from "next/link"
 import { storage } from "@/firebase/configFirebase"
 import { ref, uploadBytes } from "firebase/storage"
