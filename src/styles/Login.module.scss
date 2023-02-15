@@ -1,0 +1,53 @@
+$text_size: 18px;
+$text_color: #343a40;
+$text_hover_color: #3F0071;
+$text_nav: #ffffff;
+$text_product_size: 15px;
+$text_title_color: lightsalmon;
+
+$XS: 480px;
+$SM: 768px;
+$MD: 1024px;
+
+@mixin mobile {
+    @media (max-width: #{$SM - 1px}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: #{$SM}) and (max-width: #{$MD - 1px}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: #{$MD}) {
+        @content;
+    }
+}
+
+.contain_login {
+    background: linear-gradient(to left top, rgb(248, 205, 211), #FFE7CC);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+
+    .form {
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+        background-color: #fff;
+
+
+        .contain_title {
+            margin-bottom: 30px;
+
+            .title {
+                text-align: center;
+                font-size: calc($text_size + 8px);
+                font-weight: bold;
+            }
+        }
+    }
+}

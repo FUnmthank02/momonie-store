@@ -1,0 +1,99 @@
+$text_size: 17px;
+$text_color: #343a40;
+$text_hover_color: #3F0071;
+$text_nav: #ffffff;
+$text_product_size: 14px;
+$text_title_color: lightsalmon;
+
+$XS: 480px;
+$SM: 768px;
+$MD: 1024px;
+
+@mixin mobile {
+    @media (max-width: #{$SM - 1px}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: #{$SM}) and (max-width: #{$MD - 1px}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: #{$MD}) {
+        @content;
+    }
+}
+
+.contain_search_page {
+    padding: 130px 0 15px;
+    background-color: #f5f5f5;
+
+    .contain_sidebar {
+        padding: 30px;
+        background: linear-gradient(to left top, rgb(248, 205, 211), #FFE7CC);
+        border-radius: 7px;
+
+        @include mobile() {
+            margin-bottom: 30px;
+        }
+
+        .contain_search {
+
+            .search {
+                color: $text_color;
+            }
+        }
+
+        .title_filter {
+
+            .title {
+                margin: 10px 0;
+                font-size: $text_size;
+                color: $text_color;
+                font-weight: bold;
+            }
+        }
+
+        .sort_group {
+
+            .sort_radio {
+                margin: 10px 0;
+                font-size: calc($text_size - 2px);
+                color: $text_color;
+            }
+        }
+
+        .rangePrice {
+            font-size: calc($text_size - 2px);
+            color: $text_color;
+
+            .unit {
+                margin-right: 3px;
+                font-size: $text_product_size;
+            }
+        }
+
+        .contain_clear_btn {
+            display: flex;
+            justify-content: center;
+
+            .clear_btn {
+                background: rgb(241, 69, 69);
+                padding: 4px 20px;
+                border-radius: 10px;
+                font-size: $text_size;
+                color: $text_nav;
+                border: 1px solid lightsalmon;
+                margin-top: 10px;
+
+
+                &:hover {
+                    background: rgb(246, 118, 67);
+                }
+            }
+        }
+    }
+}

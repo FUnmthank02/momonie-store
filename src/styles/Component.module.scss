@@ -1,0 +1,145 @@
+$text_size: 17px;
+$text_color: #343a40;
+$text_hover_color: #3F0071;
+$text_nav: #ffffff;
+$text_product_size: 14px;
+$text_title_color: lightsalmon;
+
+.contain_suggest {
+    margin: 30px 0;
+
+    .wrap_suggest {
+        background: linear-gradient(to left top, rgb(248, 205, 211), #FFE7CC);
+        padding: 0 0 15px;
+        border-radius: 5px;
+
+        .contain_suggest_title {
+            text-align: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #f08080;
+            margin-bottom: 10px;
+
+
+            .suggest_title {
+                font-size: calc($text_size + 3px);
+                margin: 0;
+                color: $text_title_color;
+
+            }
+        }
+
+        .contain_product {
+
+            .contain_product_items {
+
+                .product_item {
+                    margin: 7px 0;
+                    padding: 7px;
+                    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+                    background-color: #ffffff;
+                    border-radius: 7px;
+                    position: relative;
+                    border: 1px solid transparent;
+
+
+                    &:hover {
+                        border: 1px solid lightcoral;
+                        cursor: pointer;
+                    }
+
+                    .contain_discount {
+                        position: absolute;
+                        background-color: #FFE15D;
+                        width: 50px;
+                        height: 50px;
+                        right: 0;
+                        top: 0;
+                        display: flex;
+                        align-items: center;
+                        clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 85%, 0 100%, 0 0);
+                        border-top-right-radius: 7px;
+                        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+                        .discount {
+                            color: #f61b1b;
+                            font-weight: bold;
+                            font-size: calc($text_size - 4px);
+                            margin: 0;
+                            text-align: center;
+                        }
+                    }
+
+                    .product_img {
+                        width: 100%;
+                        height: 110px;
+                    }
+
+                    .product_name {
+                        font-size: $text_product_size;
+                        display: -webkit-box;
+                        text-align: justify;
+                        -webkit-line-clamp: 2;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        -webkit-box-orient: vertical;
+                        margin: 15px 3px 7px;
+                    }
+
+                    .product_price {
+                        font-size: $text_product_size;
+                        color: #f61b1b;
+                        margin: 10px 3px 7px;
+
+                        .unit {
+                            font-size: calc($text_product_size - 2px);
+                            margin-right: 2px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.contain_category {
+
+    .wrap_category {
+        background: linear-gradient(to left top, rgb(248, 205, 211), #FFE7CC);
+        border-radius: 5px;
+
+        .contain_category_title {
+            padding: 10px;
+
+            .category_title {
+                font-size: calc($text_size + 3px);
+                color: $text_title_color;
+                margin: 0;
+                text-align: center;
+                cursor: pointer;
+
+                .iconUpDown {
+                    margin-left: 5px;
+                }
+            }
+        }
+
+        .category {
+
+            .contain_category_items {
+                transition: all .5s ease-in;
+
+                .category_item {
+                    text-align: center;
+                    border-radius: 10px;
+                    padding: 8px 3px;
+
+                    &:hover {
+                        background: linear-gradient(to left top, lightpink, lightsalmon);
+                        cursor: pointer;
+                        color: $text_nav;
+                    }
+                }
+            }
+        }
+    }
+}

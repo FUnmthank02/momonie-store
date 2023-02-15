@@ -1,0 +1,5 @@
+export const BASE_URL = 'http://localhost:3000'
+export const PRODUCT_ENDPOINT = '/api/product'
+export const CATEGORY_ENDPOINT = '/api/category'
+export const SEARCH_CATEGORY_ENDPOINT = '/api/search/category'
+export const AUTH_LOGIN_ENDPOINT = '/api/auth/login'
